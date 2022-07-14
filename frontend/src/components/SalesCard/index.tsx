@@ -1,22 +1,35 @@
 
+import DatePicker from "react-datepicker";
+import "react-datepicker/dist/react-datepicker.css";
+
 import NotificationButton from '../NotificationButton'
 import './styles.css'
 
 function SalesCard() {
 
-    
+
     return (
 
-       
-       <div className="dsmeta-card">
+
+        <div className="dsmeta-card">
 
             <h2 className="dsmeta-sales-title">Vendas</h2>
             <div>
                 <div className="dsmeta-form-control-container">
-                    <input className="dsmeta-form-control" type="text" />
+                    <DatePicker
+                        selected={new Date()}
+                        onChange={(date: Date) => { }}
+                        className="dsmeta-form-control"
+                        dateFormat="dd/MM/yyyy"
+                    />
                 </div>
                 <div className="dsmeta-form-control-container">
-                    <input className="dsmeta-form-control" type="text" />
+                    <DatePicker
+                        selected={new Date()}
+                        onChange={(date: Date) => { }}
+                        className="dsmeta-form-control"
+                        dateFormat="dd/MM/yyyy"
+                    />
                 </div>
                 <div>
                     <table className="dsmeta-sales-table">
@@ -41,7 +54,7 @@ function SalesCard() {
                                 <th>R$ 55300.00</th>
                                 <th>
                                     <div className="dsmeta-red-btn-container">
-                                       <NotificationButton />
+                                        <NotificationButton />
                                     </div>
                                 </th>
                             </tr>
@@ -69,16 +82,16 @@ function SalesCard() {
 
                                 <th>
                                     <div className="dsmeta-red-btn-container">
-                                     <NotificationButton />
+                                        <NotificationButton />
                                     </div>
                                 </th>
                             </tr>
                         </tbody>
                     </table>
-                </div>    
+                </div>
             </div>
-       </div>   
+        </div>
     )
 }
 
-            export default SalesCard
+export default SalesCard
