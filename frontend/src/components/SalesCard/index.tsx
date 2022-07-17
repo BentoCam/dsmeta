@@ -17,7 +17,7 @@ function SalesCard() {
     useEffect(( ) => {
         axios.get("http://localhost:8080/sales")
         .then(response =>{
-            console.log(response, data);
+            console.log(response.data);
         } );
     }, []);
 
@@ -109,7 +109,7 @@ function SalesCard() {
 
 
 export default SalesCard;
-function data(response: AxiosResponse<any, any>, data: any) {
+function  data(response: AxiosResponse<any, any>, data: any) {
     throw new Error("Function not implemented.");
 }
 
